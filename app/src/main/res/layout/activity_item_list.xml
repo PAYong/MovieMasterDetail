@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimary"
             app:tabGravity="fill"
-            app:tabMode="fixed" />
+            app:tabMode="scrollable" />
 
     </android.support.design.widget.AppBarLayout>
 
