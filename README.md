@@ -1,5 +1,7 @@
 # AppetiserCodingChallenge v2.0 (Java)
 App will display a list of items obtained from an iTunes Search API and show a detailed view for each item.
+<img src="https://github.com/PAYong/MovieMasterDetail/blob/master/screenshots/Screenshot_1564385579.png" width="150" height="300" />
+<img src="https://github.com/PAYong/MovieMasterDetail/blob/master/screenshots/Screenshot_1564385081.png" width="500" height="300" />
 
 ## List view:
 - Track Name
