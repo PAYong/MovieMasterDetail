@@ -19,7 +19,7 @@ import com.example.android.itunesappandroidv2.R;
 import com.example.android.itunesappandroidv2.model.MovieList;
 
 /**
- * A simple {@link Fragment} subclass.
+ * A fragment for displaying a list of movies from iTunes
  */
 public class AllMovieListFragment extends Fragment {
 

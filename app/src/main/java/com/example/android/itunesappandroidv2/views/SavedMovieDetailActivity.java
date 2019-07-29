@@ -19,6 +19,9 @@ import com.example.android.itunesappandroidv2.model.Movie;
 import com.example.android.itunesappandroidv2.viewmodels.MovieDBViewModel;
 import com.squareup.picasso.Picasso;
 
+/**
+ * An activity representing a single Item detail screen for devices with small screens
+ */
 public class SavedMovieDetailActivity extends AppCompatActivity {
 
     public static final String ARG_ITEM_TRACK_NAME = "track_name";
@@ -27,7 +30,7 @@ public class SavedMovieDetailActivity extends AppCompatActivity {
     private Movie selectedMovieItem;
     private Toolbar toolbar;
     private ActionBar actionBar;
-    CollapsingToolbarLayout appBarLayout;
+    private CollapsingToolbarLayout appBarLayout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,7 +57,6 @@ public class SavedMovieDetailActivity extends AppCompatActivity {
         });
         appBarLayout = (CollapsingToolbarLayout) findViewById(R.id.saved_toolbar_layout);
         appBarLayout.setTitleEnabled(true);
-        // Show the Up button in the action bar.
         actionBar =  getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(false);

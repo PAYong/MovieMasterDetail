@@ -10,6 +10,9 @@ import com.example.android.itunesappandroidv2.model.Movie;
 
 import java.util.List;
 
+/**
+ * This is the ViewModel for Room DB related methods
+ */
 public class MovieDBViewModel extends AndroidViewModel {
 
     private MovieRepository repository;
@@ -22,20 +25,32 @@ public class MovieDBViewModel extends AndroidViewModel {
         allMovies =  repository.getAllMovies();
     }
 
+    /**
+     * @param movieDB the Movie to be inserted in the DB
+     */
     public void insert(Movie movieDB){
         repository.insert(movieDB);
     }
 
+    /**
+     * @param movieDB the Movie to be deleted in the DB
+     */
     public void delete(Movie movieDB){
         repository.delete(movieDB);
     }
 
+    /**
+     * @param trackName the Movie selected in the list
+     * @return the Movie found using the trackName specified
+     */
     public LiveData<Movie> getMovieByTrackName(String trackName){
         selectedMovie = repository.getMovieByTrackName(trackName);
         return selectedMovie;
     }
 
-
+    /**
+     * @return all the movies from DB
+     */
     public LiveData<List<Movie>> getAllMovies(){
         return allMovies;
     }

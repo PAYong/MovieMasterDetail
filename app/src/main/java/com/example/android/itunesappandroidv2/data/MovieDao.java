@@ -19,14 +19,8 @@ public interface MovieDao {
     @Insert (onConflict = OnConflictStrategy.REPLACE)
     void insert(Movie movieDB);
 
-    @Update
-    void update(Movie movieDB);
-
     @Delete
     void delete(Movie movieDB);
-
-    @Query("DELETE FROM movie_table")
-    void deleteAllNotes();
 
     @Query("SELECT * FROM movie_table ORDER BY trackName DESC")
     LiveData<List<Movie>> getAllMovies();

@@ -8,6 +8,9 @@ import com.example.android.itunesappandroidv2.model.Movie;
 
 import java.util.List;
 
+/**
+ * This is the repository for database related methods
+ */
 public class MovieRepository {
 
     private MovieDao movieDao;

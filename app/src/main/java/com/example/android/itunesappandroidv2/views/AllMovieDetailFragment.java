@@ -31,22 +31,15 @@ import com.squareup.picasso.Picasso;
  * on handsets.
  */
 public class AllMovieDetailFragment extends Fragment {
-    /**
-     * The fragment argument representing the item ID that this fragment
-     * represents.
-     */
+
     public static final String ARG_ITEM_TRACK_NAME = "track_name";
     private String selectedTrackName;
     private MovieDBViewModel movieDBViewModel;
     private Movie selectedMovieItem;
     private Toolbar toolbar;
     private ActionBar actionBar;
-    CollapsingToolbarLayout appBarLayout;
+    private CollapsingToolbarLayout appBarLayout;
 
-    /**
-     * Mandatory empty constructor for the fragment manager to instantiate the
-     * fragment (e.g. upon screen orientation changes).
-     */
     public AllMovieDetailFragment() {
     }
 

@@ -20,6 +20,9 @@ import com.example.android.itunesappandroidv2.viewmodels.MovieDBViewModel;
 import com.example.android.itunesappandroidv2.viewmodels.MovieViewModel;
 import com.squareup.picasso.Picasso;
 
+/**
+ * An activity representing a single Item detail screen for devices with small screens
+ */
 public class AllMovieDetailActivity extends AppCompatActivity {
     
     public static final String ARG_ITEM_TRACK_NAME = "track_name";

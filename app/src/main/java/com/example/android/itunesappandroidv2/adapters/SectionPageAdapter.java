@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import com.example.android.itunesappandroidv2.R;
 import com.example.android.itunesappandroidv2.views.AllMovieListFragment;
-import com.example.android.itunesappandroidv2.views.SavedMovieFragment;
+import com.example.android.itunesappandroidv2.views.SavedMovieListFragment;
 
 public class SectionPageAdapter extends FragmentPagerAdapter {
 
@@ -26,7 +26,7 @@ public class SectionPageAdapter extends FragmentPagerAdapter {
             case 0:
                 return AllMovieListFragment.newInstance();
             case 1:
-                return SavedMovieFragment.newInstance();
+                return SavedMovieListFragment.newInstance();
             default:
                 return null;
         }
