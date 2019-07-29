@@ -22,22 +22,22 @@ import java.util.List;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * A fragment for displaying a list of saved movies from database.
  */
-public class SavedMovieFragment extends Fragment {
+public class SavedMovieListFragment extends Fragment {
 
     private boolean mTwoPane;
     private MovieDBAdapter adapter;
     private RecyclerView recyclerView;
     private FragmentManager fragmentManager;
 
-    public SavedMovieFragment() {
+    public SavedMovieListFragment() {
         // Required empty public constructor
     }
 
     // newInstance constructor for creating fragment
-    public static SavedMovieFragment newInstance() {
-        SavedMovieFragment fragmentSecond = new SavedMovieFragment();
+    public static SavedMovieListFragment newInstance() {
+        SavedMovieListFragment fragmentSecond = new SavedMovieListFragment();
         return fragmentSecond;
     }
 

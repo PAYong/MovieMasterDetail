@@ -22,7 +22,9 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-
+/**
+ * Adapter for movies retrieved from database
+ */
 public class MovieDBAdapter extends RecyclerView.Adapter<MovieDBAdapter.MovieViewHolder> {
     private Context mCtx;
     private List<Movie> movieList;
@@ -46,11 +48,11 @@ public class MovieDBAdapter extends RecyclerView.Adapter<MovieDBAdapter.MovieVie
 
     @Override
     public void onBindViewHolder(@NonNull MovieViewHolder holder, int position) {
-        Movie hero = movieList.get(position);
-        Picasso.get().load(hero.getArtworkUrl100()).error(R.drawable.ic_outline_movie_filter_24px).into(holder.imageView);
-        holder.genre.setText(hero.getPrimaryGenreName());
-        holder.trackName.setText(hero.getTrackName());
-        holder.trackPrice.setText(hero.getTrackPrice());
+        Movie movie = movieList.get(position);
+        Picasso.get().load(movie.getArtworkUrl100()).error(R.drawable.ic_outline_movie_filter_24px).into(holder.imageView);
+        holder.genre.setText(movie.getPrimaryGenreName());
+        holder.trackName.setText(movie.getTrackName());
+        holder.trackPrice.setText(movie.getTrackPrice() + movie.getCurrency());
     }
 
     @Override
