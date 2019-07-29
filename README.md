@@ -8,7 +8,6 @@ App will display a list of items obtained from an iTunes Search API and show a d
 - Genre
 - Image
 
-Note: There are instances that Track Name is empty (ex. Audiobook) app will just show Collection name and Collection price instead
 
 ## Detailed view:
 - Image
@@ -20,18 +19,26 @@ Note: There are instances that Track Name is empty (ex. Audiobook) app will just
 - Collection price 
 - Country
 - Description
+- Heart icon when tapped will saved the item using Room and will show in Saved Items tab
 
-The app will automatically load all items retrieved from iTunes if device is connected to an internet.
-
-## Two menus are available
-- Refresh 
-	This will execute the search again.
+## Saved Items
 - Saved Items
-	Every successful search or refresh, the app will automatically saved all items and will show in Saved Items. 
-### Note
-	App is using Android's SharedPreferences.
-	The data is lost:
-- On uninstalling the application
-- On clearing the application data (through Settings)
+	All the saved movies will show in Saved Items tab. 
+	User can unsave the movie by tapping again the Heart icon and movie will be deleted from DB and list will be updated.
+	
+## Architecture (MVVM)
+- LiveData
+Ensures that the data displayed in the user is the same with what is retrieved from the iTunes or from DB (Room).
+It also notifies Observer objects when the state changes, which is what I used in the ViewModels.
+- Room 
+Easy to implement since it provides an abstraction layer over SQLite.
+It also works with LiveData for data observation, while SQLite does not.
+- ViewModel 
+Allows data to survive configuration changes such as screen rotations.
+ViewModel objects can also contain LifecycleObservers, such as LiveData objects.
+
+	
+	
+
 
 
