@@ -1,5 +1,4 @@
-# MovieMasterDetail
-# AppetiserCodingChallenge
+# AppetiserCodingChallenge v2.0 (Java)
 App will display a list of items obtained from an iTunes Search API and show a detailed view for each item.
 
 ## List view:
@@ -22,9 +21,8 @@ App will display a list of items obtained from an iTunes Search API and show a d
 - Heart icon when tapped will saved the item using Room and will show in Saved Items tab
 
 ## Saved Items
-- Saved Items
-	All the saved movies will show in Saved Items tab. 
-	User can unsave the movie by tapping again the Heart icon and movie will be deleted from DB and list will be updated.
+All the saved movies will show in Saved Items tab. 
+User can unsave the movie by tapping again the Heart icon and movie will be deleted from DB and list will be updated.
 	
 ## Architecture (MVVM)
 - LiveData
