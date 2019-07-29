@@ -1,7 +1,14 @@
-package com.example.android.myapplication;
+package com.example.android.itunesappandroidv2.model;
 
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+import android.support.annotation.NonNull;
+
+@Entity(tableName = "movie_table")
 public class Movie {
 
+    @PrimaryKey
+    @NonNull
     private String trackName;
     private String artworkUrl100;
     private String trackPrice;

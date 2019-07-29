@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.android.myapplication">
+    package="com.example.android.itunesappandroidv2">
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ItemListActivity"
+            android:name="com.example.android.itunesappandroidv2.views.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -24,13 +24,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ItemDetailActivity"
-            android:label="@string/title_item_detail"
-            android:parentActivityName=".ItemListActivity"
+            android:name="com.example.android.itunesappandroidv2.views.AllMovieDetailActivity"
+            android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.android.myapplication.ItemListActivity" />
+        </activity>
+        <activity
+            android:name="com.example.android.itunesappandroidv2.views.SavedMovieDetailActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 
